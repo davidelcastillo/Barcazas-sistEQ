@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistEcuaciones.Principal"
+             NavigationPage.HasNavigationBar="False">
+    
+        <StackLayout BackgroundColor="#303347">
+            <Label Text="Sistema de Ecuaciones Lineales"
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="#E6E9F1"
+                   FontFamily="Tahoma"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextTransform="None"
+                   Margin="0,8,0,0" />
+            <Frame VerticalOptions="FillAndExpand"
+                   Margin="5,3,5,5"
+                   CornerRadius="15"
+                   HasShadow="False">
+                <StackLayout BackgroundColor="#E6E9F1"
+                             VerticalOptions="Center"
+                             Spacing="30">
+                    <Image Source="https://w7.pngwing.com/pngs/276/741/png-transparent-document-cameras-animation-video-capture-stop-motion-handwritten-mathematical-problem-solving-equations-blue-text-computer-thumbnail.png" />
+                    <Label Text="Ingrese la cantidad de barcazas disponibles"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="#151D24"
+                           FontFamily="Tahoma"
+                           FontSize="18.5"
+                           FontAttributes="Bold"
+                           TextTransform="None" />
+                    <Entry x:Name = "txtCantBrz"
+                           TextColor="#151D24"
+                           FontFamily="Tahoma"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextTransform="None" 
+                           Keyboard="Numeric"/>
+                    <Button x:Name ="btm1"
+                            Text="Aceptar"
+                            TextTransform="None"
+                            Background="#303347"
+                            TextColor="#E6E9F1"
+                            FontFamily="Tahoma"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            CornerRadius="20"
+                            BorderWidth="20"
+                            WidthRequest="20"
+                            HeightRequest="80" 
+                            Clicked = "btm1_Clicked"/>
+                    
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    
+</ContentPage>

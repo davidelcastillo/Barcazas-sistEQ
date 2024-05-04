@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistEcuaciones.MainPage"
+             NavigationPage.HasNavigationBar="False">
+    
+    <StackLayout BackgroundColor="#303347">
+        <Label Text="Sistema de Ecuaciones Lineales"
+               HorizontalOptions="CenterAndExpand"
+               TextColor="#E6E9F1"
+               FontFamily="Tahoma"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextTransform="None"
+               Margin="0,8,0,0" />
+        <Frame VerticalOptions="FillAndExpand"
+               Margin="5,3,5,5"
+               CornerRadius="15"
+               HasShadow="False">
+            <Grid RowDefinitions="50,*">
+                <Label Text="Numero de barcazas: "
+                       x:Name = "lblCantBrz"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="#151D24"
+                       FontFamily="Tahoma"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextTransform="None"
+                       Grid.Row="0"></Label>
+                <StackLayout BackgroundColor="#E6E9F1"
+                             Spacing="30"
+                             Grid.Row="1"
+                             VerticalOptions="Center">
+                    <Label Text="Ingrese las capacidades de los contenedores"
+                           x:Name= "lblcapacidad"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="#151D24"
+                           FontFamily="Tahoma"
+                           FontSize="19"
+                           FontAttributes="Bold"
+                           TextTransform="None"
+                           VerticalOptions="Start" />
+                    <Entry TextColor="#151D24"
+                           x:Name = "txtA"
+                           Placeholder="Tipo A"
+                           FontFamily="Tahoma"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           Keyboard="Numeric"
+                           TextTransform="None" />
+                    <Entry TextColor="#151D24"
+                           x:Name="txtB"
+                           Placeholder="Tipo B"
+                           FontFamily="Tahoma"
+                           FontSize="20"
+                           Keyboard="Numeric"
+                           FontAttributes="Bold"
+                           TextTransform="None" />
+                    <Entry TextColor="#151D24"
+                           x:Name="txtC"
+                           Placeholder="Tipo C"
+                           FontFamily="Tahoma"
+                           Keyboard="Numeric"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextTransform="None" />
+                    <Button Text="Aceptar"
+                            x:Name="btm2"
+                            TextTransform="None"
+                            Background="#303347"
+                            TextColor="#E6E9F1"
+                            FontFamily="Tahoma"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            CornerRadius="20"
+                            BorderWidth="20"
+                            WidthRequest="20"
+                            HeightRequest="80"
+                            VerticalOptions="Center" 
+                            Clicked = "btm2_Clicked"/>
+                </StackLayout>
+            </Grid>
+        </Frame>
+    </StackLayout>
+</ContentPage>
