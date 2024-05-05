@@ -22,6 +22,7 @@ namespace SistEcuaciones
         {
             Application.Current.Properties["n"] = Convert.ToInt32(txtCantBrz.Text);
             Navigation.PushAsync(new MainPage());
+            //--
         }
     }
 }

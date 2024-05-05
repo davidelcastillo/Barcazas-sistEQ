@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,22 @@ namespace SistEcuaciones
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Final : ContentPage
     {
+        double[,] matriz = new double[3, Convert.ToUInt16(Application.Current.Properties["m"]) + 1];
+        string aux;
+        int n = Convert.ToUInt16(Application.Current.Properties["m"]);
+
         public Final()
         {
+            aux = Convert.ToString(Application.Current.Properties["matriz"]);
+            matriz = JsonConvert.DeserializeObject<double[,]>(aux);
+            Gauss_Seidel(matriz, n);
+
             InitializeComponent();
+        }
+
+        private void Gauss_Seidel(double[,] matriz, int n)
+        {
+            // 
         }
     }
 }
