@@ -19,11 +19,12 @@ namespace SistEcuaciones
 
         public Final()
         {
+            InitializeComponent();
+
             aux = Convert.ToString(Application.Current.Properties["matriz"]);
             matriz = JsonConvert.DeserializeObject<double[,]>(aux);
-            Gauss_Seidel(matriz, n);
 
-            InitializeComponent();
+            
         }
 
         private void Gauss_Seidel(double[,] matriz, int n)

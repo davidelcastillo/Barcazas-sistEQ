@@ -55,16 +55,6 @@ namespace SistEcuaciones
                     Application.Current.Properties["matriz"] = aux;
 
                     Navigation.PushAsync(new Final());
-
-                    for (int i = 0; i < m + 1; i++)
-                    {
-                        Console.WriteLine(matriz2[0, i] + " ");
-                        Console.WriteLine();
-                        Console.WriteLine(matriz2[1, i] + " ");
-                        Console.WriteLine();
-                        Console.WriteLine(matriz2[2, i] + " ");
-                        Console.WriteLine();
-                    }
                 }
 
                 cont2++;
@@ -97,16 +87,6 @@ namespace SistEcuaciones
                         Application.Current.Properties["matriz"] = aux;
 
                         Navigation.PushAsync(new Metodo());
-
-                        for (int i = 0; i < n + 1; i++)
-                        {
-                            Console.WriteLine(matriz[0, i] + " ");
-                            Console.WriteLine();
-                            Console.WriteLine(matriz[1, i] + " ");
-                            Console.WriteLine();
-                            Console.WriteLine(matriz[2, i] + " ");
-                            Console.WriteLine();
-                        }
                     }
                 }
 
