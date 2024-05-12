@@ -46,8 +46,8 @@ namespace SistEcuaciones
                 // Ingreso de Datos faltantes en matriz 2
 
                 matriz2[0, cont2] = Convert.ToDouble(txtA.Text);
-                matriz2[1, cont2] = Convert.ToDouble(txtA.Text);
-                matriz2[2, cont2] = Convert.ToDouble(txtA.Text);
+                matriz2[1, cont2] = Convert.ToDouble(txtB.Text);
+                matriz2[2, cont2] = Convert.ToDouble(txtC.Text);
 
                 if (cont2 == m - 1)
                 {
@@ -80,16 +80,16 @@ namespace SistEcuaciones
                 if (cont == 0)
                 {
                     matriz[0, n] = Convert.ToDouble(txtA.Text);
-                    matriz[1, n] = Convert.ToDouble(txtA.Text);
-                    matriz[2, n] = Convert.ToDouble(txtA.Text);
+                    matriz[1, n] = Convert.ToDouble(txtB.Text);
+                    matriz[2, n] = Convert.ToDouble(txtC.Text);
 
                 }
 
                 else
                 {
                     matriz[0, cont - 1] = Convert.ToDouble(txtA.Text);
-                    matriz[1, cont - 1] = Convert.ToDouble(txtA.Text);
-                    matriz[2, cont - 1] = Convert.ToDouble(txtA.Text);
+                    matriz[1, cont - 1] = Convert.ToDouble(txtB.Text);
+                    matriz[2, cont - 1] = Convert.ToDouble(txtC.Text);
 
                     if (cont == n)
                     {

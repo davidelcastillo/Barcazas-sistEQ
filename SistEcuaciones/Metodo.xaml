@@ -50,7 +50,7 @@
                            IsReadOnly="True"
                            TextTransform="None" />
                     <Label Text="Cantidad de viajes del tipo B "
-                           x:Name="lblcapacidad"
+                           x:Name="lblcapacidad2"
                            HorizontalOptions="CenterAndExpand"
                            TextColor="#151D24"
                            FontFamily="Tahoma"
@@ -68,7 +68,7 @@
                            FontAttributes="Bold"
                            TextTransform="None" />
                     <Label Text="Cantidad de viajes del tipo C "
-                           x:Name="lblcapacidad"
+                           x:Name="lblcapacidad3"
                            HorizontalOptions="CenterAndExpand"
                            TextColor="#151D24"
                            FontFamily="Tahoma"
