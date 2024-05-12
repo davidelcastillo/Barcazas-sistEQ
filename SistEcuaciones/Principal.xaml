@@ -13,8 +13,9 @@
                    FontAttributes="Bold"
                    TextTransform="None"
                    Margin="0,8,0,0" />
-            <Frame VerticalOptions="FillAndExpand"
-                   Margin="5,3,5,5"
+        <Frame VerticalOptions="FillAndExpand" Ningún hilo se ejecutará a menos que el hilo que se
+encuentra en ejecución renuncie en forma voluntaria
+               Margin="5,3,5,5"
                    CornerRadius="15"
                    HasShadow="False">
                 <StackLayout BackgroundColor="#E6E9F1"

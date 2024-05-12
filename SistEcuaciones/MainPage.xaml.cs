@@ -25,7 +25,7 @@ namespace SistEcuaciones
         {
             InitializeComponent();
             lblCantBrz.Text = "Numero de barcazas: "  + Convert.ToString(Application.Current.Properties["n"]);
-            bool flag = (bool)Application.Current.Properties["flag"];
+            bool flag = (bool)Application.Current.Properties["flag"];  
 
             if (flag)
             {
