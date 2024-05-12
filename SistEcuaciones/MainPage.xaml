@@ -29,7 +29,7 @@
                        Grid.Row="0"></Label>
                 <StackLayout BackgroundColor="#E6E9F1"
                              Spacing="30"
-                             Grid.Row="1"
+                             Grid.Row="1" 
                              VerticalOptions="Center">
                     <Label Text="Ingrese las capacidades de los contenedores"
                            x:Name= "lblcapacidad"

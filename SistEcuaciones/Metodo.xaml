@@ -88,7 +88,7 @@
                     
                 </StackLayout>
                 <StackLayout BackgroundColor="#E6E9F1"
-                             Spacing="15"
+                             Spacing="15" 
                              Grid.Row="2"
                              VerticalOptions="Center">
                     <Label Text="Desea agregar más barcazas?"

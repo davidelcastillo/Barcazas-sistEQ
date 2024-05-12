@@ -114,7 +114,7 @@
                            FontFamily="Tahoma"
                            Keyboard="Numeric"
                            FontSize="20"
-                           FontAttributes="Bold"
+                           FontAttributes="Bold" 
                            TextTransform="None" />
                 </StackLayout>
             </Grid>
