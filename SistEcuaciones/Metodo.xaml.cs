@@ -38,13 +38,20 @@ namespace SistEcuaciones
 
         private void btm3_Clicked(object sender, EventArgs e)
         {
-			bool flag = (bool)Application.Current.Properties["flag"];
-			flag = true;
-            Application.Current.Properties["flag"] = flag;
+            if (txtCantExtra.Text != null)
+            {
+                bool flag = (bool)Application.Current.Properties["flag"];
+                flag = true;
+                Application.Current.Properties["flag"] = flag;
 
-            Application.Current.Properties["m"] = Convert.ToInt32(txtCantExtra.Text) + Convert.ToUInt16(Application.Current.Properties["n"]);
+                Application.Current.Properties["m"] = Convert.ToInt32(txtCantExtra.Text) + Convert.ToUInt16(Application.Current.Properties["n"]);
 
-            Navigation.PushAsync(new MainPage());
+                Navigation.PushAsync(new MainPage());
+            }
+            else
+            {
+                DisplayAlert("Error", "No ha ingresado cantidad de barcazas extras.", "OK");
+            }
         }
 
         private bool SolucionUnica(double[,] matriz)

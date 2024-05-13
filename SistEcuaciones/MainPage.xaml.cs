@@ -37,67 +37,84 @@ namespace SistEcuaciones
         {
             bool flag = (bool)Application.Current.Properties["flag"];
 
-            if (flag)
+            if (txtA.Text == null)
             {
-                lblCantBrz.Text = "Numero de barcazas: " + (Convert.ToString(Application.Current.Properties["n"] + Convert.ToString(Application.Current.Properties["m"])));
-                if (flag2) { ConstruirMatriz2(); }
-                flag2 = false;
-
-                lblcapacidad.Text = "Ingrese los datos de la barcaza N° " + ( Convert.ToInt16(cont2) + 2);
-                // Ingreso de Datos faltantes en matriz 2
-
-                matriz2[0, cont2] = Convert.ToDouble(txtA.Text);
-                matriz2[1, cont2] = Convert.ToDouble(txtB.Text);
-                matriz2[2, cont2] = Convert.ToDouble(txtC.Text);
-
-                if (cont2 == m - 1)
-                {
-                    string aux = JsonConvert.SerializeObject(matriz2);
-                    Application.Current.Properties["matriz"] = aux;
-
-                    Navigation.PushAsync(new Final());
-                }
-
-                cont2++;
-
-                txtA.Text = "";
-                txtB.Text = "";
-                txtC.Text = "";
-
+                DisplayAlert("Error", "Porfavor ingrese cantidad del tipo A.", "OK");
             }
-            else
+            else if (txtB.Text ==null)
             {
-
-                if (cont == 0)
+                DisplayAlert("Error", "Porfavor ingrese cantidad del tipo B.", "OK");
+            }
+            else if (txtC.Text ==null)
+            {
+                DisplayAlert("Error", "Porfavor ingrese cantidad del tipo C.", "OK");
+            }
+            else {
+                if (flag)
                 {
-                    matriz[0, n] = Convert.ToDouble(txtA.Text);
-                    matriz[1, n] = Convert.ToDouble(txtB.Text);
-                    matriz[2, n] = Convert.ToDouble(txtC.Text);
+                    int x = Convert.ToInt16(Application.Current.Properties["n"]);
+                    int z = Convert.ToInt16(Application.Current.Properties["m"]);
+                    int rdao = x + z;
+                    lblCantBrz.Text = "Numero de barcazas: " + Convert.ToString(rdao);
+                    if (flag2) { ConstruirMatriz2(); }
+                    flag2 = false;
 
-                }
+                    lblcapacidad.Text = "Ingrese los datos de la barcaza N° " + (Convert.ToInt16(cont2) + 2);
+                    // Ingreso de Datos faltantes en matriz 2
 
-                else
-                {
-                    matriz[0, cont - 1] = Convert.ToDouble(txtA.Text);
-                    matriz[1, cont - 1] = Convert.ToDouble(txtB.Text);
-                    matriz[2, cont - 1] = Convert.ToDouble(txtC.Text);
+                    matriz2[0, cont2] = Convert.ToDouble(txtA.Text);
+                    matriz2[1, cont2] = Convert.ToDouble(txtB.Text);
+                    matriz2[2, cont2] = Convert.ToDouble(txtC.Text);
 
-                    if (cont == n)
+                    if (cont2 == m - 1)
                     {
-                        string aux = JsonConvert.SerializeObject(matriz);
+                        string aux = JsonConvert.SerializeObject(matriz2);
                         Application.Current.Properties["matriz"] = aux;
 
-                        Navigation.PushAsync(new Metodo());
+                        Navigation.PushAsync(new Final());
                     }
+
+                    cont2++;
+
+                    txtA.Text = "";
+                    txtB.Text = "";
+                    txtC.Text = "";
+
                 }
+                else
+                {
 
-                lblcapacidad.Text = "Ingrese los datos de la barcaza N° " + Convert.ToInt16(cont + 1);
-                cont++;
+                    if (cont == 0)
+                    {
+                        matriz[0, n] = Convert.ToDouble(txtA.Text);
+                        matriz[1, n] = Convert.ToDouble(txtB.Text);
+                        matriz[2, n] = Convert.ToDouble(txtC.Text);
 
-                txtA.Text = "";
-                txtB.Text = "";
-                txtC.Text = "";
-            }
+                    }
+
+                    else
+                    {
+                        matriz[0, cont - 1] = Convert.ToDouble(txtA.Text);
+                        matriz[1, cont - 1] = Convert.ToDouble(txtB.Text);
+                        matriz[2, cont - 1] = Convert.ToDouble(txtC.Text);
+
+                        if (cont == n)
+                        {
+                            string aux = JsonConvert.SerializeObject(matriz);
+                            Application.Current.Properties["matriz"] = aux;
+
+                            Navigation.PushAsync(new Metodo());
+                        }
+                    }
+
+                    lblcapacidad.Text = "Ingrese los datos de la barcaza N° " + Convert.ToInt16(cont + 1);
+                    cont++;
+
+                    txtA.Text = "";
+                    txtB.Text = "";
+                    txtC.Text = "";
+                }
+            } 
 
         }
 

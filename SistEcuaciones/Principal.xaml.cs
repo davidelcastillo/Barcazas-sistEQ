@@ -21,7 +21,14 @@ namespace SistEcuaciones
         private void btm1_Clicked (object sender, EventArgs e)
         {
             Application.Current.Properties["n"] = Convert.ToInt32(txtCantBrz.Text);
-            Navigation.PushAsync(new MainPage());
+            if (txtCantBrz.Text != null)
+            {
+                Navigation.PushAsync(new MainPage());
+            }
+            else
+            {
+                DisplayAlert("Error", "Porfavor ingrese cantidad de contenedores.", "OK");
+            }
             //--
         }
     }
