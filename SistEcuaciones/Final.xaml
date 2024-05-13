@@ -77,7 +77,7 @@
                            TextTransform="None"
                            VerticalOptions="Start" />
                     <Label Text="Aquí va X3"
-                           x:Name="txtC "
+                           x:Name="txtC"
                            HorizontalOptions="CenterAndExpand"
                            TextColor="#151D24"
                            FontFamily="Tahoma"

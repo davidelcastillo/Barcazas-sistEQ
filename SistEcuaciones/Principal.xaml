@@ -20,12 +20,12 @@
                 <StackLayout BackgroundColor="#E6E9F1"
                              VerticalOptions="Center"
                              Spacing="30">
-                    <Image Source="https://w7.pngwing.com/pngs/276/741/png-transparent-document-cameras-animation-video-capture-stop-motion-handwritten-mathematical-problem-solving-equations-blue-text-computer-thumbnail.png" />
+      
                     <Label Text="Ingrese la cantidad de barcazas disponibles"
                            HorizontalOptions="CenterAndExpand"
                            TextColor="#151D24"
                            FontFamily="Tahoma"
-                           FontSize="18.5"
+                           FontSize="17"
                            FontAttributes="Bold"
                            TextTransform="None" />
                     <Entry x:Name = "txtCantBrz"

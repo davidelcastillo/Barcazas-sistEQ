@@ -22,6 +22,16 @@ namespace SistEcuaciones
 
             aux = Convert.ToString(Application.Current.Properties["matriz"]);
             matriz = JsonConvert.DeserializeObject<double[,]>(aux);
+
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for (int j = 0; j < matriz.GetLength(1); j++)
+                {
+                    Console.Write(matriz[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+
             Ejecucion(matriz);
    
 		}
@@ -142,6 +152,10 @@ namespace SistEcuaciones
         private void Ejecucion(double[,] matriz) {
             double[] rdo = ResolverSistema(matriz);
             int[] aux = new int[rdo.Length];
+            for (int i = 0; i < aux.Length; i++)
+            {
+                aux[i] = Convert.ToInt16( Math.Ceiling(rdo[i]));
+            }
             // Mostrar resultado
             txtA.Text = Convert.ToString(aux[0]);
             txtB.Text = Convert.ToString(aux[1]);
