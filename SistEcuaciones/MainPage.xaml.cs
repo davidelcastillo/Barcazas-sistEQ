@@ -29,7 +29,7 @@ namespace SistEcuaciones
 
             if (flag)
             {
-                lblcapacidad.Text = "Ingrese los datos de la 1 barcaza";
+                lblcapacidad.Text = "Ingrese los datos de la barcaza N° 4";
             }
         }
 
@@ -39,10 +39,11 @@ namespace SistEcuaciones
 
             if (flag)
             {
+                lblCantBrz.Text = "Numero de barcazas: " + (Convert.ToString(Application.Current.Properties["n"] + Convert.ToString(Application.Current.Properties["m"])));
                 if (flag2) { ConstruirMatriz2(); }
                 flag2 = false;
 
-                lblcapacidad.Text = "Ingrese los datos de la " + ( Convert.ToInt16(cont2) + 1) + " barcaza";
+                lblcapacidad.Text = "Ingrese los datos de la barcaza N° " + ( Convert.ToInt16(cont2) + 2);
                 // Ingreso de Datos faltantes en matriz 2
 
                 matriz2[0, cont2] = Convert.ToDouble(txtA.Text);
@@ -90,7 +91,7 @@ namespace SistEcuaciones
                     }
                 }
 
-                lblcapacidad.Text = "Ingrese los datos de la " + Convert.ToInt16(cont + 1) + " barcaza";
+                lblcapacidad.Text = "Ingrese los datos de la barcaza N° " + Convert.ToInt16(cont + 1);
                 cont++;
 
                 txtA.Text = "";
