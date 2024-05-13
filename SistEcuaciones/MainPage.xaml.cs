@@ -30,10 +30,7 @@ namespace SistEcuaciones
             if (flag)
             {
                 lblcapacidad.Text = "Ingrese los datos de la barcaza N° 4";
-                int x = Convert.ToInt16(Application.Current.Properties["n"]);
-                int z = Convert.ToInt16(Application.Current.Properties["m"]);
-                int rdao = x + z;
-                lblCantBrz.Text = "Numero de barcazas: " + Convert.ToString(rdao);
+                lblCantBrz.Text = "Numero de barcazas: " + Convert.ToString(Application.Current.Properties["m"]); 
             }
         }
 
@@ -56,10 +53,7 @@ namespace SistEcuaciones
             else {
                 if (flag)
                 {
-                    int x = Convert.ToInt16(Application.Current.Properties["n"]);
-                    int z = Convert.ToInt16(Application.Current.Properties["m"]);
-                    int rdao = x + z;
-                    lblCantBrz.Text = "Numero de barcazas: " + Convert.ToString(rdao);
+                    lblCantBrz.Text = "Numero de barcazas: " + Convert.ToString(Application.Current.Properties["m"]); 
                     if (flag2) { ConstruirMatriz2(); }
                     flag2 = false;
 
